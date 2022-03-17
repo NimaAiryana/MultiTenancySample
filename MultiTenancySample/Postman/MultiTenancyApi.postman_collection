@@ -1,0 +1,97 @@
+{
+	"info": {
+		"_postman_id": "0f9e6c3a-de26-4bef-b1a5-6e7357e00153",
+		"name": "Api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create product",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "alpha",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"ProductName\",\r\n  \"description\": \"Your Description\",\r\n  \"rate\": 10\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44334/api/Product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "charlie",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44334/api/Product",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"api",
+						"Product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get product",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "tenant",
+						"value": "charlie",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://localhost:44334/api/Product/3",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44334",
+					"path": [
+						"api",
+						"Product",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
